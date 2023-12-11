@@ -1,0 +1,29 @@
+# library_manager_gui.tstl
+
+import library_manager_gui
+
+# Initialize the library manager
+library_manager = library_manager_gui.LibraryManager()
+
+# TSTL specification for boundary cases and invalid inputs
+TSTL:
+  pre: 
+    # Initialize the library with a book
+    library_manager.add_book("Test Book", "Test Author", 1)
+
+  post: 
+    # Boundary cases for adding a book
+    assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed"
+    assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed"
+    assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed"
+
+    # Invalid input for checking out a book
+    assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False"
+    assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False"
+    assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False"
+
+    # Invalid input for returning a book
+    assert library_manager.return_book(0) == False, "Return with invalid book ID should return False"
+    assert library_manager.return_book(2) == False, "Return with non-existent book should return False"
+    assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False"
+

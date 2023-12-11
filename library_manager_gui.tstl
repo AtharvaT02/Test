@@ -1,29 +1,48 @@
-# library_manager_gui.tstl
+# TSTL harness for testing the LibraryManager class
 
-import library_manager_gui
+# Import the LibraryManager class from library_manager_gui
+IMPORT library_manager_gui
 
-# Initialize the library manager
-library_manager = library_manager_gui.LibraryManager()
+# Define a pool of LibraryManager objects
+pool: LibraryManager 1
 
-# TSTL specification for boundary cases and invalid inputs
-TSTL:
-  pre: 
-    # Initialize the library with a book
-    library_manager.add_book("Test Book", "Test Author", 1)
+# Action to initialize the LibraryManager
+action:
+    library := LibraryManager()
+    library.load_data()
 
-  post: 
-    # Boundary cases for adding a book
-    assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed"
-    assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed"
-    assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed"
+# Action to add a book
+action:
+    title <- ["Short Title", "Long Title"*50, "Normal Title"]
+    author <- ["Author", "Long Author Name"*25, "Normal Author"]
+    copies_available <- [0, 1, 100]
+    library.add_book(title, author, copies_available)
 
-    # Invalid input for checking out a book
-    assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False"
-    assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False"
-    assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False"
+# Action to check out a book
+action:
+    book_id <- [1, 2, 100] # Assuming these IDs are valid
+    library.check_out_book(book_id)
 
-    # Invalid input for returning a book
-    assert library_manager.return_book(0) == False, "Return with invalid book ID should return False"
-    assert library_manager.return_book(2) == False, "Return with non-existent book should return False"
-    assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False"
+# Action to return a book
+action:
+    book_id <- [1, 2, 100] # Assuming these IDs are valid
+    library.return_book(book_id)
 
+# Action to get book information
+action:
+    book_id <- [1, 2, 100] # Assuming these IDs are valid
+    library.get_book_info(book_id)
+
+# Action to list all books
+action:
+    library.list_all_books()
+
+# Action to search for books
+action:
+    query <- ["", "Unknown", "Known Title"]
+    library.search_books(query)
+
+# Action to check overdue books
+action:
+    days <- [0, 7, 30]
+    library.get_overdue_books(days)

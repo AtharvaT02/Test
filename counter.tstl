@@ -1,0 +1,23 @@
+# TSTL harness for the Counter class
+
+# Import the Counter class
+from counter import Counter
+
+# Define a pool of Counter objects
+pool: Counter 1
+
+# Action to initialize the Counter
+action:
+    counter := Counter()
+
+# Action to increment the counter
+action:
+    counter.increment()
+
+# Action to decrement the counter
+action:
+    counter.decrement()
+
+# Action to get the current value of the counter
+action:
+    counter.get_value()

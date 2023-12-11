@@ -24,19 +24,21 @@ import coverage
 class sut(object):
     def act0(self):
         '''
-        import library_manager_gui
+        from counter import self.p_Counter0
         '''
-        self.__test.append(('''import library_manager_gui ''',self.guard0,self.act0))
+        self.__test.append(('''from counter import self.p_self.p_Counter[0] ''',self.guard0,self.act0))
         self.__raised = None
         self.__refRaised = None
         if self.__verboseActions:
             __bV = {}
-            print('ACTION:',self.prettyName('''import library_manager_gui '''))
+            print('ACTION:',self.prettyName('''from counter import self.p_self.p_Counter[0] '''))
+            try: __bV['''self.p_Counter[0]'''] = repr(self.p_Counter[0]); print(self.prettyName('''self.p_Counter[0]''') + ' =', __bV['''self.p_Counter[0]'''], ':',type(self.p_Counter[0]))
+            except: pass
         if self.__collectCov: self.__cov.start()
         try: test_before_each(self)
         except: pass
         try:
-            import library_manager_gui
+            from counter import self.p_self.p_Counter[0]
         except Exception as exc:
             raised = exc
             if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
@@ -44,28 +46,35 @@ class sut(object):
         finally:
             try: self.__raised = raised
             except: pass
+            self.p_Counter_used[0]=True
+            self.nowUsed('''self.p_Counter[0]''')
             try: test_after_each(self)
             except: pass
+            if self.__verboseActions:
+                try:
+                    __aV = repr(self.p_Counter[0])
+                    if __aV != __bV['''self.p_Counter[0]''']: print('=>',self.prettyName('''self.p_Counter[0]''') + ' =',__aV, ':',type(self.p_Counter[0]))
+                except: pass
             if self.__collectCov: self.__cov.stop(); self.__updateCov()
         if self.__verboseActions: print('='*50)
     def guard0(self):
-        return True
+        return (self.p_Counter[0] is not None)
     
     def act1(self):
         '''
-        library_manager = library_manager_gui.LibraryManager()
+        action:
         '''
-        self.__test.append(('''library_manager = library_manager_gui.LibraryManager() ''',self.guard1,self.act1))
+        self.__test.append(('''action: ''',self.guard1,self.act1))
         self.__raised = None
         self.__refRaised = None
         if self.__verboseActions:
             __bV = {}
-            print('ACTION:',self.prettyName('''library_manager = library_manager_gui.LibraryManager() '''))
+            print('ACTION:',self.prettyName('''action: '''))
         if self.__collectCov: self.__cov.start()
         try: test_before_each(self)
         except: pass
         try:
-            library_manager = library_manager_gui.LibraryManager()
+            action:
         except Exception as exc:
             raised = exc
             if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
@@ -82,19 +91,21 @@ class sut(object):
     
     def act2(self):
         '''
-        TSTL:
+        counter = self.p_Counter0()
         '''
-        self.__test.append(('''TSTL: ''',self.guard2,self.act2))
+        self.__test.append(('''counter = self.p_self.p_Counter[0]() ''',self.guard2,self.act2))
         self.__raised = None
         self.__refRaised = None
         if self.__verboseActions:
             __bV = {}
-            print('ACTION:',self.prettyName('''TSTL: '''))
+            print('ACTION:',self.prettyName('''counter = self.p_self.p_Counter[0]() '''))
+            try: __bV['''self.p_Counter[0]'''] = repr(self.p_Counter[0]); print(self.prettyName('''self.p_Counter[0]''') + ' =', __bV['''self.p_Counter[0]'''], ':',type(self.p_Counter[0]))
+            except: pass
         if self.__collectCov: self.__cov.start()
         try: test_before_each(self)
         except: pass
         try:
-            TSTL:
+            counter = self.p_self.p_Counter[0]()
         except Exception as exc:
             raised = exc
             if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
@@ -102,28 +113,35 @@ class sut(object):
         finally:
             try: self.__raised = raised
             except: pass
+            self.p_Counter_used[0]=True
+            self.nowUsed('''self.p_Counter[0]''')
             try: test_after_each(self)
             except: pass
+            if self.__verboseActions:
+                try:
+                    __aV = repr(self.p_Counter[0])
+                    if __aV != __bV['''self.p_Counter[0]''']: print('=>',self.prettyName('''self.p_Counter[0]''') + ' =',__aV, ':',type(self.p_Counter[0]))
+                except: pass
             if self.__collectCov: self.__cov.stop(); self.__updateCov()
         if self.__verboseActions: print('='*50)
     def guard2(self):
-        return True
+        return (self.p_Counter[0] is not None)
     
     def act3(self):
         '''
-        pre: 
+        action:
         '''
-        self.__test.append(('''pre:  ''',self.guard3,self.act3))
+        self.__test.append(('''action: ''',self.guard3,self.act3))
         self.__raised = None
         self.__refRaised = None
         if self.__verboseActions:
             __bV = {}
-            print('ACTION:',self.prettyName('''pre:  '''))
+            print('ACTION:',self.prettyName('''action: '''))
         if self.__collectCov: self.__cov.start()
         try: test_before_each(self)
         except: pass
         try:
-            pre: 
+            action:
         except Exception as exc:
             raised = exc
             if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
@@ -140,19 +158,19 @@ class sut(object):
     
     def act4(self):
         '''
-        library_manager.add_book("Test Book", "Test Author", 1)
+        counter.increment()
         '''
-        self.__test.append(('''library_manager.add_book("Test Book", "Test Author", 1) ''',self.guard4,self.act4))
+        self.__test.append(('''counter.increment() ''',self.guard4,self.act4))
         self.__raised = None
         self.__refRaised = None
         if self.__verboseActions:
             __bV = {}
-            print('ACTION:',self.prettyName('''library_manager.add_book("Test Book", "Test Author", 1) '''))
+            print('ACTION:',self.prettyName('''counter.increment() '''))
         if self.__collectCov: self.__cov.start()
         try: test_before_each(self)
         except: pass
         try:
-            library_manager.add_book("Test Book", "Test Author", 1)
+            counter.increment()
         except Exception as exc:
             raised = exc
             if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
@@ -169,19 +187,19 @@ class sut(object):
     
     def act5(self):
         '''
-        post: 
+        action:
         '''
-        self.__test.append(('''post:  ''',self.guard5,self.act5))
+        self.__test.append(('''action: ''',self.guard5,self.act5))
         self.__raised = None
         self.__refRaised = None
         if self.__verboseActions:
             __bV = {}
-            print('ACTION:',self.prettyName('''post:  '''))
+            print('ACTION:',self.prettyName('''action: '''))
         if self.__collectCov: self.__cov.start()
         try: test_before_each(self)
         except: pass
         try:
-            post: 
+            action:
         except Exception as exc:
             raised = exc
             if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
@@ -198,19 +216,19 @@ class sut(object):
     
     def act6(self):
         '''
-        assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed"
+        counter.decrement()
         '''
-        self.__test.append(('''assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" ''',self.guard6,self.act6))
+        self.__test.append(('''counter.decrement() ''',self.guard6,self.act6))
         self.__raised = None
         self.__refRaised = None
         if self.__verboseActions:
             __bV = {}
-            print('ACTION:',self.prettyName('''assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" '''))
+            print('ACTION:',self.prettyName('''counter.decrement() '''))
         if self.__collectCov: self.__cov.start()
         try: test_before_each(self)
         except: pass
         try:
-            assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed"
+            counter.decrement()
         except Exception as exc:
             raised = exc
             if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
@@ -227,19 +245,19 @@ class sut(object):
     
     def act7(self):
         '''
-        assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed"
+        action:
         '''
-        self.__test.append(('''assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" ''',self.guard7,self.act7))
+        self.__test.append(('''action: ''',self.guard7,self.act7))
         self.__raised = None
         self.__refRaised = None
         if self.__verboseActions:
             __bV = {}
-            print('ACTION:',self.prettyName('''assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" '''))
+            print('ACTION:',self.prettyName('''action: '''))
         if self.__collectCov: self.__cov.start()
         try: test_before_each(self)
         except: pass
         try:
-            assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed"
+            action:
         except Exception as exc:
             raised = exc
             if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
@@ -256,19 +274,19 @@ class sut(object):
     
     def act8(self):
         '''
-        assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed"
+        counter.get_value()
         '''
-        self.__test.append(('''assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" ''',self.guard8,self.act8))
+        self.__test.append(('''counter.get_value() ''',self.guard8,self.act8))
         self.__raised = None
         self.__refRaised = None
         if self.__verboseActions:
             __bV = {}
-            print('ACTION:',self.prettyName('''assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" '''))
+            print('ACTION:',self.prettyName('''counter.get_value() '''))
         if self.__collectCov: self.__cov.start()
         try: test_before_each(self)
         except: pass
         try:
-            assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed"
+            counter.get_value()
         except Exception as exc:
             raised = exc
             if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
@@ -281,180 +299,6 @@ class sut(object):
             if self.__collectCov: self.__cov.stop(); self.__updateCov()
         if self.__verboseActions: print('='*50)
     def guard8(self):
-        return True
-    
-    def act9(self):
-        '''
-        assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False"
-        '''
-        self.__test.append(('''assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" ''',self.guard9,self.act9))
-        self.__raised = None
-        self.__refRaised = None
-        if self.__verboseActions:
-            __bV = {}
-            print('ACTION:',self.prettyName('''assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" '''))
-        if self.__collectCov: self.__cov.start()
-        try: test_before_each(self)
-        except: pass
-        try:
-            assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False"
-        except Exception as exc:
-            raised = exc
-            if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
-            raise
-        finally:
-            try: self.__raised = raised
-            except: pass
-            try: test_after_each(self)
-            except: pass
-            if self.__collectCov: self.__cov.stop(); self.__updateCov()
-        if self.__verboseActions: print('='*50)
-    def guard9(self):
-        return True
-    
-    def act10(self):
-        '''
-        assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False"
-        '''
-        self.__test.append(('''assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" ''',self.guard10,self.act10))
-        self.__raised = None
-        self.__refRaised = None
-        if self.__verboseActions:
-            __bV = {}
-            print('ACTION:',self.prettyName('''assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" '''))
-        if self.__collectCov: self.__cov.start()
-        try: test_before_each(self)
-        except: pass
-        try:
-            assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False"
-        except Exception as exc:
-            raised = exc
-            if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
-            raise
-        finally:
-            try: self.__raised = raised
-            except: pass
-            try: test_after_each(self)
-            except: pass
-            if self.__collectCov: self.__cov.stop(); self.__updateCov()
-        if self.__verboseActions: print('='*50)
-    def guard10(self):
-        return True
-    
-    def act11(self):
-        '''
-        assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False"
-        '''
-        self.__test.append(('''assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" ''',self.guard11,self.act11))
-        self.__raised = None
-        self.__refRaised = None
-        if self.__verboseActions:
-            __bV = {}
-            print('ACTION:',self.prettyName('''assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" '''))
-        if self.__collectCov: self.__cov.start()
-        try: test_before_each(self)
-        except: pass
-        try:
-            assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False"
-        except Exception as exc:
-            raised = exc
-            if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
-            raise
-        finally:
-            try: self.__raised = raised
-            except: pass
-            try: test_after_each(self)
-            except: pass
-            if self.__collectCov: self.__cov.stop(); self.__updateCov()
-        if self.__verboseActions: print('='*50)
-    def guard11(self):
-        return True
-    
-    def act12(self):
-        '''
-        assert library_manager.return_book(0) == False, "Return with invalid book ID should return False"
-        '''
-        self.__test.append(('''assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" ''',self.guard12,self.act12))
-        self.__raised = None
-        self.__refRaised = None
-        if self.__verboseActions:
-            __bV = {}
-            print('ACTION:',self.prettyName('''assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" '''))
-        if self.__collectCov: self.__cov.start()
-        try: test_before_each(self)
-        except: pass
-        try:
-            assert library_manager.return_book(0) == False, "Return with invalid book ID should return False"
-        except Exception as exc:
-            raised = exc
-            if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
-            raise
-        finally:
-            try: self.__raised = raised
-            except: pass
-            try: test_after_each(self)
-            except: pass
-            if self.__collectCov: self.__cov.stop(); self.__updateCov()
-        if self.__verboseActions: print('='*50)
-    def guard12(self):
-        return True
-    
-    def act13(self):
-        '''
-        assert library_manager.return_book(2) == False, "Return with non-existent book should return False"
-        '''
-        self.__test.append(('''assert library_manager.return_book(2) == False, "Return with non-existent book should return False" ''',self.guard13,self.act13))
-        self.__raised = None
-        self.__refRaised = None
-        if self.__verboseActions:
-            __bV = {}
-            print('ACTION:',self.prettyName('''assert library_manager.return_book(2) == False, "Return with non-existent book should return False" '''))
-        if self.__collectCov: self.__cov.start()
-        try: test_before_each(self)
-        except: pass
-        try:
-            assert library_manager.return_book(2) == False, "Return with non-existent book should return False"
-        except Exception as exc:
-            raised = exc
-            if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
-            raise
-        finally:
-            try: self.__raised = raised
-            except: pass
-            try: test_after_each(self)
-            except: pass
-            if self.__collectCov: self.__cov.stop(); self.__updateCov()
-        if self.__verboseActions: print('='*50)
-    def guard13(self):
-        return True
-    
-    def act14(self):
-        '''
-        assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False"
-        '''
-        self.__test.append(('''assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" ''',self.guard14,self.act14))
-        self.__raised = None
-        self.__refRaised = None
-        if self.__verboseActions:
-            __bV = {}
-            print('ACTION:',self.prettyName('''assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" '''))
-        if self.__collectCov: self.__cov.start()
-        try: test_before_each(self)
-        except: pass
-        try:
-            assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False"
-        except Exception as exc:
-            raised = exc
-            if self.__verboseActions: print('RAISED EXCEPTION:',type(raised),raised)
-            raise
-        finally:
-            try: self.__raised = raised
-            except: pass
-            try: test_after_each(self)
-            except: pass
-            if self.__collectCov: self.__cov.stop(); self.__updateCov()
-        if self.__verboseActions: print('='*50)
-    def guard14(self):
         return True
     
     def __init__(self):
@@ -490,9 +334,13 @@ class sut(object):
         self.__poolsUsed = set([])
         self.__disabledByNone = set([])
         self.__disabledByUsed = set([])
+        self.p_Counter = {}
+        self.p_Counter_used = {}
+        self.p_Counter[0] = None
+        self.p_Counter_used[0] = True
     # BEGIN INITIALIZATION CODE
     # END INITIALIZATION CODE
-        self.__SUTName = """library_manager_gui"""
+        self.__SUTName = """counter"""
         self.__actions = []
         self.__names = {}
         self.__poolPrefix = "self.p_"
@@ -501,37 +349,25 @@ class sut(object):
         self.__swarmConfig = None
         self.__actionClasses = []
         self.__essentialClasses = []
-        self.__actionClasses.append('''import library_manager_gui ''')
-        self.__actionClasses.append('''library_manager = library_manager_gui.LibraryManager() ''')
-        self.__actionClasses.append('''TSTL: ''')
-        self.__actionClasses.append('''  pre:  ''')
-        self.__actionClasses.append('''    library_manager.add_book("Test Book", "Test Author", 1) ''')
-        self.__actionClasses.append('''  post:  ''')
-        self.__actionClasses.append('''    assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" ''')
-        self.__actionClasses.append('''    assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" ''')
-        self.__actionClasses.append('''    assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" ''')
-        self.__actionClasses.append('''    assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" ''')
-        self.__actionClasses.append('''    assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" ''')
-        self.__actionClasses.append('''    assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" ''')
-        self.__actionClasses.append('''    assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" ''')
-        self.__actionClasses.append('''    assert library_manager.return_book(2) == False, "Return with non-existent book should return False" ''')
-        self.__actionClasses.append('''    assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" ''')
+        self.__actionClasses.append('''from counter import Counter ''')
+        self.__actionClasses.append('''action: ''')
+        self.__actionClasses.append('''    counter := Counter() ''')
+        self.__actionClasses.append('''action: ''')
+        self.__actionClasses.append('''    counter.increment() ''')
+        self.__actionClasses.append('''action: ''')
+        self.__actionClasses.append('''    counter.decrement() ''')
+        self.__actionClasses.append('''action: ''')
+        self.__actionClasses.append('''    counter.get_value() ''')
         self.__dependencies = {}
-        self.__dependencies['''import library_manager_gui '''] = []
-        self.__dependencies['''library_manager = library_manager_gui.LibraryManager() '''] = []
-        self.__dependencies['''TSTL: '''] = []
-        self.__dependencies['''  pre:  '''] = []
-        self.__dependencies['''    library_manager.add_book("Test Book", "Test Author", 1) '''] = []
-        self.__dependencies['''  post:  '''] = []
-        self.__dependencies['''    assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" '''] = []
-        self.__dependencies['''    assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" '''] = []
-        self.__dependencies['''    assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" '''] = []
-        self.__dependencies['''    assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" '''] = []
-        self.__dependencies['''    assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" '''] = []
-        self.__dependencies['''    assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" '''] = []
-        self.__dependencies['''    assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" '''] = []
-        self.__dependencies['''    assert library_manager.return_book(2) == False, "Return with non-existent book should return False" '''] = []
-        self.__dependencies['''    assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" '''] = []
+        self.__dependencies['''from counter import Counter '''] = []
+        self.__dependencies['''action: '''] = []
+        self.__dependencies['''    counter := Counter() '''] = []
+        self.__dependencies['''action: '''] = []
+        self.__dependencies['''    counter.increment() '''] = []
+        self.__dependencies['''action: '''] = []
+        self.__dependencies['''    counter.decrement() '''] = []
+        self.__dependencies['''action: '''] = []
+        self.__dependencies['''    counter.get_value() '''] = []
         self.__orderings = {}
         self.__okExcepts = {}
         self.__preCode = {}
@@ -557,102 +393,73 @@ class sut(object):
         self.__consts = []
         self.__opaque = []
         self.__abstraction = {}
+        self.__psize["Counter"] = 1
+        self.__pools.append("self.p_Counter")
+        self.__poolUsers['''self.p_Counter[0]'''] = set([])
+        self.__poolUsers['''self.p_Counter[0]'''].add('''from counter import self.p_self.p_Counter[0] ''')
+        self.__poolUsers['''self.p_Counter[0]'''].add('''counter = self.p_self.p_Counter[0]() ''')
         if self.__useCould: self.computeInitialEnabled()
         
-        self.__actions.append(('''import library_manager_gui ''',self.guard0,self.act0))
-        self.__names['''import library_manager_gui '''] = ('''import library_manager_gui ''',self.guard0,self.act0)
-        self.__actionClass['''import library_manager_gui '''] = '''import library_manager_gui '''
-        self.__orderings['''import library_manager_gui '''] = 1
-        self.__okExcepts['''import library_manager_gui '''] = ''''''
+        self.__actions.append(('''from counter import self.p_self.p_Counter[0] ''',self.guard0,self.act0))
+        self.__names['''from counter import self.p_self.p_Counter[0] '''] = ('''from counter import self.p_self.p_Counter[0] ''',self.guard0,self.act0)
+        self.__actionClass['''from counter import self.p_self.p_Counter[0] '''] = '''from counter import Counter '''
+        self.__orderings['''from counter import self.p_self.p_Counter[0] '''] = 1
+        self.__okExcepts['''from counter import self.p_self.p_Counter[0] '''] = ''''''
         
-        self.__actions.append(('''library_manager = library_manager_gui.LibraryManager() ''',self.guard1,self.act1))
-        self.__names['''library_manager = library_manager_gui.LibraryManager() '''] = ('''library_manager = library_manager_gui.LibraryManager() ''',self.guard1,self.act1)
-        self.__actionClass['''library_manager = library_manager_gui.LibraryManager() '''] = '''library_manager = library_manager_gui.LibraryManager() '''
-        self.__orderings['''library_manager = library_manager_gui.LibraryManager() '''] = 2
-        self.__okExcepts['''library_manager = library_manager_gui.LibraryManager() '''] = ''''''
+        self.__actions.append(('''action: ''',self.guard1,self.act1))
+        self.__names['''action: '''] = ('''action: ''',self.guard1,self.act1)
+        self.__actionClass['''action: '''] = '''action: '''
+        self.__orderings['''action: '''] = 2
+        self.__okExcepts['''action: '''] = ''''''
         
-        self.__actions.append(('''TSTL: ''',self.guard2,self.act2))
-        self.__names['''TSTL: '''] = ('''TSTL: ''',self.guard2,self.act2)
-        self.__actionClass['''TSTL: '''] = '''TSTL: '''
-        self.__orderings['''TSTL: '''] = 3
-        self.__okExcepts['''TSTL: '''] = ''''''
+        self.__actions.append(('''counter = self.p_self.p_Counter[0]() ''',self.guard2,self.act2))
+        self.__names['''counter = self.p_self.p_Counter[0]() '''] = ('''counter = self.p_self.p_Counter[0]() ''',self.guard2,self.act2)
+        self.__actionClass['''counter = self.p_self.p_Counter[0]() '''] = '''    counter := Counter() '''
+        self.__orderings['''counter = self.p_self.p_Counter[0]() '''] = 3
+        self.__okExcepts['''counter = self.p_self.p_Counter[0]() '''] = ''''''
         
-        self.__actions.append(('''pre:  ''',self.guard3,self.act3))
-        self.__names['''pre:  '''] = ('''pre:  ''',self.guard3,self.act3)
-        self.__actionClass['''pre:  '''] = '''  pre:  '''
-        self.__orderings['''pre:  '''] = 4
-        self.__okExcepts['''pre:  '''] = ''''''
+        self.__actions.append(('''action: ''',self.guard3,self.act3))
+        self.__names['''action: '''] = ('''action: ''',self.guard3,self.act3)
+        self.__actionClass['''action: '''] = '''action: '''
+        self.__orderings['''action: '''] = 4
+        self.__okExcepts['''action: '''] = ''''''
         
-        self.__actions.append(('''library_manager.add_book("Test Book", "Test Author", 1) ''',self.guard4,self.act4))
-        self.__names['''library_manager.add_book("Test Book", "Test Author", 1) '''] = ('''library_manager.add_book("Test Book", "Test Author", 1) ''',self.guard4,self.act4)
-        self.__actionClass['''library_manager.add_book("Test Book", "Test Author", 1) '''] = '''    library_manager.add_book("Test Book", "Test Author", 1) '''
-        self.__orderings['''library_manager.add_book("Test Book", "Test Author", 1) '''] = 5
-        self.__okExcepts['''library_manager.add_book("Test Book", "Test Author", 1) '''] = ''''''
+        self.__actions.append(('''counter.increment() ''',self.guard4,self.act4))
+        self.__names['''counter.increment() '''] = ('''counter.increment() ''',self.guard4,self.act4)
+        self.__actionClass['''counter.increment() '''] = '''    counter.increment() '''
+        self.__orderings['''counter.increment() '''] = 5
+        self.__okExcepts['''counter.increment() '''] = ''''''
         
-        self.__actions.append(('''post:  ''',self.guard5,self.act5))
-        self.__names['''post:  '''] = ('''post:  ''',self.guard5,self.act5)
-        self.__actionClass['''post:  '''] = '''  post:  '''
-        self.__orderings['''post:  '''] = 6
-        self.__okExcepts['''post:  '''] = ''''''
+        self.__actions.append(('''action: ''',self.guard5,self.act5))
+        self.__names['''action: '''] = ('''action: ''',self.guard5,self.act5)
+        self.__actionClass['''action: '''] = '''action: '''
+        self.__orderings['''action: '''] = 6
+        self.__okExcepts['''action: '''] = ''''''
         
-        self.__actions.append(('''assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" ''',self.guard6,self.act6))
-        self.__names['''assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" '''] = ('''assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" ''',self.guard6,self.act6)
-        self.__actionClass['''assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" '''] = '''    assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" '''
-        self.__orderings['''assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" '''] = 7
-        self.__okExcepts['''assert library_manager.add_book("", "Test Author", 1) == None, "Empty title should not be allowed" '''] = ''''''
+        self.__actions.append(('''counter.decrement() ''',self.guard6,self.act6))
+        self.__names['''counter.decrement() '''] = ('''counter.decrement() ''',self.guard6,self.act6)
+        self.__actionClass['''counter.decrement() '''] = '''    counter.decrement() '''
+        self.__orderings['''counter.decrement() '''] = 7
+        self.__okExcepts['''counter.decrement() '''] = ''''''
         
-        self.__actions.append(('''assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" ''',self.guard7,self.act7))
-        self.__names['''assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" '''] = ('''assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" ''',self.guard7,self.act7)
-        self.__actionClass['''assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" '''] = '''    assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" '''
-        self.__orderings['''assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" '''] = 8
-        self.__okExcepts['''assert library_manager.add_book("Test Book", "", 1) == None, "Empty author should not be allowed" '''] = ''''''
+        self.__actions.append(('''action: ''',self.guard7,self.act7))
+        self.__names['''action: '''] = ('''action: ''',self.guard7,self.act7)
+        self.__actionClass['''action: '''] = '''action: '''
+        self.__orderings['''action: '''] = 8
+        self.__okExcepts['''action: '''] = ''''''
         
-        self.__actions.append(('''assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" ''',self.guard8,self.act8))
-        self.__names['''assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" '''] = ('''assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" ''',self.guard8,self.act8)
-        self.__actionClass['''assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" '''] = '''    assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" '''
-        self.__orderings['''assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" '''] = 9
-        self.__okExcepts['''assert library_manager.add_book("Test Book", "Test Author", 0) == None, "Zero copies should not be allowed" '''] = ''''''
-        
-        self.__actions.append(('''assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" ''',self.guard9,self.act9))
-        self.__names['''assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" '''] = ('''assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" ''',self.guard9,self.act9)
-        self.__actionClass['''assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" '''] = '''    assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" '''
-        self.__orderings['''assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" '''] = 10
-        self.__okExcepts['''assert library_manager.check_out_book(0) == False, "Check out with invalid book ID should return False" '''] = ''''''
-        
-        self.__actions.append(('''assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" ''',self.guard10,self.act10))
-        self.__names['''assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" '''] = ('''assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" ''',self.guard10,self.act10)
-        self.__actionClass['''assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" '''] = '''    assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" '''
-        self.__orderings['''assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" '''] = 11
-        self.__okExcepts['''assert library_manager.check_out_book(2) == False, "Check out with non-existent book should return False" '''] = ''''''
-        
-        self.__actions.append(('''assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" ''',self.guard11,self.act11))
-        self.__names['''assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" '''] = ('''assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" ''',self.guard11,self.act11)
-        self.__actionClass['''assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" '''] = '''    assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" '''
-        self.__orderings['''assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" '''] = 12
-        self.__okExcepts['''assert library_manager.check_out_book("abc") == False, "Check out with non-integer book ID should return False" '''] = ''''''
-        
-        self.__actions.append(('''assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" ''',self.guard12,self.act12))
-        self.__names['''assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" '''] = ('''assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" ''',self.guard12,self.act12)
-        self.__actionClass['''assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" '''] = '''    assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" '''
-        self.__orderings['''assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" '''] = 13
-        self.__okExcepts['''assert library_manager.return_book(0) == False, "Return with invalid book ID should return False" '''] = ''''''
-        
-        self.__actions.append(('''assert library_manager.return_book(2) == False, "Return with non-existent book should return False" ''',self.guard13,self.act13))
-        self.__names['''assert library_manager.return_book(2) == False, "Return with non-existent book should return False" '''] = ('''assert library_manager.return_book(2) == False, "Return with non-existent book should return False" ''',self.guard13,self.act13)
-        self.__actionClass['''assert library_manager.return_book(2) == False, "Return with non-existent book should return False" '''] = '''    assert library_manager.return_book(2) == False, "Return with non-existent book should return False" '''
-        self.__orderings['''assert library_manager.return_book(2) == False, "Return with non-existent book should return False" '''] = 14
-        self.__okExcepts['''assert library_manager.return_book(2) == False, "Return with non-existent book should return False" '''] = ''''''
-        
-        self.__actions.append(('''assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" ''',self.guard14,self.act14))
-        self.__names['''assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" '''] = ('''assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" ''',self.guard14,self.act14)
-        self.__actionClass['''assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" '''] = '''    assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" '''
-        self.__orderings['''assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" '''] = 15
-        self.__okExcepts['''assert library_manager.return_book("abc") == False, "Return with non-integer book ID should return False" '''] = ''''''
+        self.__actions.append(('''counter.get_value() ''',self.guard8,self.act8))
+        self.__names['''counter.get_value() '''] = ('''counter.get_value() ''',self.guard8,self.act8)
+        self.__actionClass['''counter.get_value() '''] = '''    counter.get_value() '''
+        self.__orderings['''counter.get_value() '''] = 9
+        self.__okExcepts['''counter.get_value() '''] = ''''''
         self.__actions_backup = list(self.__actions)
         self.__actions_assume_backup = list(self.__actions)
     def slowPoolStates(self):
         nonePools = []
         notUsedPools = []
+        if self.p_Counter[0] is None: nonePools.append('''self.p_Counter[0]''')
+        if not self.p_Counter_used[0]: notUsedPools.append('''self.p_Counter[0]''')
         return (nonePools, notUsedPools)
     def restart(self):
         try:
@@ -671,6 +478,10 @@ class sut(object):
         self.__poolsUsed = set([])
         self.__disabledByNone = set([])
         self.__disabledByUsed = set([])
+        self.p_Counter = {}
+        self.p_Counter_used = {}
+        self.p_Counter[0] = None
+        self.p_Counter_used[0] = True
         if self.__useCould: self.computeInitialEnabled()
         try:
             test_after_restart(self)
@@ -686,18 +497,23 @@ class sut(object):
         if self.__replayBacktrack:
             return self.captureReplay(self.__test)
         st = []
+        try: st.append(copy.deepcopy(self.p_Counter))
+        except: st.append("UNABLE TO COPY")
+        st.append(copy.deepcopy(self.p_Counter_used))
         st.append(copy.copy(self.__test))
         return st
     def shallowState(self):
-        return []
+        return [ ("self.p_Counter",self.p_Counter)]
     def abstract(self,state):
         if self.__replayBacktrack:
             return state
-        return ()
+        return ( state[0],state[1])
     def backtrack(self,old):
         if self.__replayBacktrack:
             self.replay(self.replayable(old))
             return
+        self.p_Counter = copy.deepcopy(old[0])
+        self.p_Counter_used = copy.deepcopy(old[1])
         self.__test = copy.copy(old[-1])
     def check(self):
         return True

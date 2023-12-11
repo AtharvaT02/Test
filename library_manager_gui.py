@@ -1,7 +1,7 @@
 import json
 from datetime import datetime, timedelta
 
-class LibraryManager:
+class :
     def __init__(self, database_file='library_database.json'):
         self.database_file = database_file
         self.books = self.load_data()
